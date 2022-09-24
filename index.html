@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header_notes">
+            <p>Name</p>
+            <p>Created</p>
+            <p>Category</p>
+            <p>Content</p>
+            <p>Dates</p>
+            <div class="buttons-block">
+                <button id="acrhieved-all" onclick="archievedAll()"><i class="fas fa-arrow-alt-circle-down"></i></button>
+                <button id="delete-all" onclick="removeAllNotes()"><i class="fas fa-trash-alt"></i></button>
+            </div>
+        </div>
+
+        <div id="notes" class="notes">
+
+        </div>
+        <button id="create-note">Create</button>
+
+        <div class="create-note-popup">
+            <p>Add your note</p>
+            <form onSubmit="addNotes(event)" class="elements-created">
+                <div class="element">
+                    <label for="name">Name:</label>
+                    <input id="name-input" type="text" name="name" required></input>
+                </div>
+                <div class="element">
+                    <label for="category">Category:</label>
+                    <select id="select-category" name="category" id="">
+                        <option value="Random-Thought">Random-Thought</option>
+                        <option value="Task">Task</option>
+                        <option value="Idea">Idea</option>
+                    </select>
+                </div>
+                <div class="element">
+                    <label for="content">Content</label>
+                    <textarea id="content-textarea" type="text" name="content"></textarea>
+                </div>
+                <button type="submit" id="add">Add</button>
+            </form>
+            <button id="close" class="close-popop">Close</button>
+        </div>
+
+
+        <div class="update-popup">
+
+        </div>
+        <div class="headers-notes-sorted header_notes">
+           
+            <p>Category</p>
+            <p>Active</p>
+            <p>Archieved</p>
+            
+        </div>
+        
+        <div class="notes-sorted">
+
+        </div>
+    </div>
+    <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+    <script src="./script/data.js"></script>
+    <script src="./script/script.js"></script>
+
+</body>
+
+</html>
